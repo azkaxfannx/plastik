@@ -101,7 +101,7 @@ const NavComponent = () => {
         </div>
       </div>
       {/* ketika desktop */}
-      <div className="mt-4 lg:mt-0 lg:block hidden lg:flex flex-col lg:ml-4 lg:flex-row gap-2 w-fit  lg:w-auto">
+      <div className="mt-4 lg:mt-0 lg:block hidden lg:flex flex-col lg:mr-4 lg:flex-row gap-2 w-fit  lg:w-auto">
           <button className="border-2 p-2 px-4 rounded-md border-black hover:shadow-lg hover:shadow-black/25 w-full lg:w-auto">
             Donate <span className="text-red-600">❤</span>
           </button>
