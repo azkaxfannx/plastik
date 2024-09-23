@@ -77,8 +77,8 @@ const NavComponent = () => {
   };
 
   return (
-    <Navbar className="px-4 justify-between flex-wrap">
-      <div className="flex items-center justify-between w-full lg:w-auto">
+    <Navbar className=" justify-between bg-white py-0 flex-wrap sticky z-40 top-0">
+      <div className="flex px-4 items-center justify-between min-h-16 w-full z-20 bg-white lg:w-auto">
         <img src="/api/placeholder/40/40" alt="Isi Logo" className="rounded-full" />
         <button 
           className="lg:hidden"
@@ -87,11 +87,11 @@ const NavComponent = () => {
           <i className={`fa-solid ${isMenuOpen ? 'fa-times' : 'fa-bars'}`}></i>
         </button>
       </div>
-      <div className={`${isMenuOpen ? 'fixed' : 'hidden'} lg:flex w-full lg:w-auto flex-col lg:flex-row items-start lg:items-center transition-all z-50 bg-white w-full right-0.5 duration-300 top-10 mt-4 lg:mt-0`}>
+      <div className={`${isMenuOpen ? 'top-[3rem]' : 'top-[-20rem]'} px-2 lg:static fixed lg:flex w-full  lg:w-auto flex-col lg:flex-row items-start lg:items-center transition-all z-10 bg-white w-full right-0.5 duration-300  mt-4 lg:mt-0`}>
         {Object.entries(dropdownItems).map(([title, items]) => (
           <DropdownItem key={title} title={title} items={items} isMobile={isMobile} />
         ))}
-        <div className="mt-4 lg:mt-0 lg:ml-40 flex flex-col lg:flex-row gap-2 w-fit ml-4 lg:w-auto">
+        <div className="mt-4 lg:mt-0 lg:hidden block  flex flex-col lg:flex-row gap-2 w-fit ml-4 lg:w-auto">
           <button className="border-2 p-2 px-4 rounded-md border-black hover:shadow-lg hover:shadow-black/25 w-full lg:w-auto">
             Donate <span className="text-red-600">❤</span>
           </button>
@@ -99,6 +99,15 @@ const NavComponent = () => {
             Starterkits
           </button>
         </div>
+      </div>
+      {/* ketika desktop */}
+      <div className="mt-4 lg:mt-0 lg:block hidden lg:flex flex-col lg:ml-4 lg:flex-row gap-2 w-fit  lg:w-auto">
+          <button className="border-2 p-2 px-4 rounded-md border-black hover:shadow-lg hover:shadow-black/25 w-full lg:w-auto">
+            Donate <span className="text-red-600">❤</span>
+          </button>
+          <button className="border-2 p-2 px-4 bg-yellow-400 rounded-md border-black hover:shadow-lg hover:shadow-black/25 w-full lg:w-auto">
+            Starterkits
+          </button>
       </div>
     </Navbar>
   );
