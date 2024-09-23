@@ -20,7 +20,7 @@ const DropdownItem = ({ title, items, isMobile }) => {
           : 'absolute left-0 top-full mt-1 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 mt-2 border-2 border-black'
         }
       `}>
-        <div className="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
+        <div className="py-1 mx-2 text-gray-700" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
           {items.map((item, index) => (
             <a
               key={index}
