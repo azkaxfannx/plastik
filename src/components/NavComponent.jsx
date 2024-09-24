@@ -54,7 +54,7 @@ const NavComponent = () => {
           <i className={`fa-solid ${isMenuOpen ? 'fa-times' : 'fa-bars'}`}></i>
         </button>
       </div>
-      <div className={`${isMenuOpen ? 'top-[3rem]' : 'top-[-20rem]'} px-2 lg:ml-40 lg:static fixed lg:flex w-full  lg:w-auto flex-col lg:flex-row items-start lg:items-center transition-all z-10 bg-white w-full right-0.5 duration-300  mt-4 lg:mt-0`}>
+      <div className={`${isMenuOpen ? 'top-[3rem]' : 'top-[-20rem]'} px-2 lg:ml-32 lg:static fixed lg:flex w-full  lg:w-auto flex-col lg:flex-row items-start lg:items-center transition-all z-10 bg-white w-full right-0.5 duration-300  mt-4 lg:mt-0`}>
         {Object.entries(dropdownItems).map(([title, items]) => (
           <DropdownItem key={title} title={title} items={items} isMobile={isMobile} />
         ))}
